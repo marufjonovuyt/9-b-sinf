@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>9-B Sinf Sayti</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="navbar">
+    <div class="nav-one">
+      <img src="./img/9-b.jpg" alt="9-B Logo" class="logo">
+      <h1>9-B</h1>
+    </div>
+
+    <div class="nav-right">
+      <span class="toggle" id="darkToggle" onclick="toggleDark()">🌙</span>
+      <span class="menu-btn" id="menuBtn" onclick="openMenu()">☰</span>
+    </div>
+  </div>
+
+  <div class="side-menu" id="sideMenu" aria-hidden="true">
+    <div class="menu-menu">
+      <h2>Menu</h2>
+      <span class="close-btn" id="closeBtn" onclick="closeMenu()">✕</span>
+    </div>
+
+    <nav>
+      <a class="nav-link" href="jadval.html">📚 Dars jadvali</a>
+      <a class="nav-link" href="oquvchilar.html">👥 O‘quvchilar</a>
+      <a class="nav-link" href="oqituvchilar.html">🎓 O‘qituvchilar</a>
+      <a class="nav-link" href="yutuqlar.html">🏆 Yutuqlar</a>
+      <a class="nav-link" href="yangiliklar.html">📰 Yangiliklar</a>
+      <a class="nav-link back" href="index.html">← Orqaga</a>
+    </nav>
+  </div>
+
+  <!-- overlay MUST be before the script or script should wait DOMContentLoaded.
+       We place it here so script can query it immediately. -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <div class="content">
+    <div class="card">
+      <h2>9-B Sinf Saytiga Xush Kelibsiz</h2>
+      <p>Bu yerda sinfimiz haqida barcha ma’lumotlarni topishingiz mumkin.</p>
+    </div>
+  </div>
+
+  <main class="main">
+  <div class="main-wrapper fade-up">
+
+    <div class="main__card" onclick="openModal('./img/maktab.jpg', 'BU BIZNING MAKTABIMIZ 57-MAKTAB! \n Manzil : Andijon viloyati Asaka tumani \n Direktor : A.Azimjanova')">
+      <img src="./img/maktab.jpg">
+      <h3>57-Maktab</h3>
+    </div>
+
+    <div class="main__card" onclick="openModal('./img/classroom.jpg', 'BU BIZNING SINF XONAMIZ! \n 👥 Sinfda jami 35 nafar oquvchi bor \n Sinf Raxbar : M.Moydinova ')">
+      <img src="./img/classroom.jpg">
+      <h3>Sinf xonasi</h3>
+    </div>
+
+  </div>
+</main>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">✕</span>
+    <img id="modalImg">
+    <p id="modalText"></p>
+  </div>
+</div>
+
+  <footer>
+    <hr style="margin-bottom: 20px;">
+    &copy;<b>2025 9-B Sinf Sayti. All Rights Reserved. Powered by</b>  <a href="https://t.me/marufjonvx7">Ma'rufjonov</a>.
+  </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
